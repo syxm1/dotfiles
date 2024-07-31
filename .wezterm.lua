@@ -7,7 +7,7 @@ config.check_for_updates = false
 config.default_prog = {'ubuntu.exe'}
 
 -- color
-local scheme = 'Afterglow'
+local scheme = 'rose-pine'
 config.color_scheme = scheme
 
 -- window

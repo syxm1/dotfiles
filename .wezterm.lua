@@ -1,16 +1,14 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
+-- General settings
 config.check_for_updates = false
-
--- default program
 config.default_prog = {'ubuntu.exe'}
+config.color_scheme = 'rose-pine'
+config.font = wezterm.font 'CaskaydiaCove Nerd Font'
+config.font_size = 14.0
 
--- color
-local scheme = 'rose-pine'
-config.color_scheme = scheme
-
--- window
+-- Window settings
 config.enable_scroll_bar = false
 config.enable_tab_bar = false
 config.window_decorations = 'RESIZE|TITLE'
@@ -21,46 +19,41 @@ config.window_padding = {
     bottom = 0,
 }
 
--- wallpaper
-local imgsrc = 'C:/Users/hisya/Pictures/Wallpapers/1294333.png'
+-- Background settings
 config.background = {
     {
-    source = {File = imgsrc},
-    hsb = {brightness = 0.025, saturation = 0.5}
+        source = {File = 'C:/Users/hisya/Pictures/Wallpapers/1294333.png'},
+        hsb = {brightness = 0.025, saturation = 0.5}
     }
 }
 
--- fonts
-config.font = wezterm.font 'CaskaydiaCove Nerd Font'
-config.font_size = 14.0
-
--- key mappings
+-- Key mappings
 config.keys = {
-    -- split pane vertically
+    -- Split pane vertically
     {
         key = '"',
         mods = 'CTRL|SHIFT|ALT',
         action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
     },
-    -- split pane horizontally
+    -- Split pane horizontally
     {
         key = '%',
         mods = 'CTRL|SHIFT|ALT',
         action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
     },
-    -- close current pane
+    -- Close current pane
     {
         key = 'w',
         mods = 'CTRL|ALT',
         action = wezterm.action.CloseCurrentPane { confirm = true },
     },
-    -- change pane (by alphabet)
-    { 
-        key = '8', 
-        mods = 'CTRL', 
-        action = wezterm.action.PaneSelect 
+    -- Change pane (by alphabet)
+    {
+        key = '8',
+        mods = 'CTRL',
+        action = wezterm.action.PaneSelect,
     },
-    -- reload configuration
+    -- Reload configuration
     {
         key = 'R',
         mods = 'CTRL|SHIFT|ALT',

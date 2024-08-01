@@ -1,59 +1,66 @@
 local wezterm = require 'wezterm'
 local config = wezterm.config_builder()
 
--- General settings
 config.check_for_updates = false
-config.default_prog = {'ubuntu.exe'}
-config.color_scheme = 'rose-pine'
-config.font = wezterm.font 'CaskaydiaCove Nerd Font'
-config.font_size = 14.0
 
--- Window settings
+-- default program
+config.default_prog = {'ubuntu.exe'}
+
+-- color
+local scheme = 'rose-pine'
+config.color_scheme = scheme
+
+-- window
 config.enable_scroll_bar = false
 config.enable_tab_bar = false
-config.window_decorations = 'RESIZE|TITLE'
+config.window_decorations = 'RESIZE'
 config.window_padding = {
-    left = 2,
+    left = 0,
     right = 0,
-    top = 2,
+    top = 0,
     bottom = 0,
 }
 
--- Background settings
+-- wallpaper
+local imgsrc = "C:/Users/hisya/OneDrive/Pictures/Wallpapers/1294333.png"
 config.background = {
     {
-        source = {File = 'C:/Users/hisya/Pictures/Wallpapers/1294333.png'},
-        hsb = {brightness = 0.025, saturation = 0.5}
+        source = {File = imgsrc},
+        hsb = {brightness = 0.02, saturation = 0.7}
     }
 }
 
--- Key mappings
+-- fonts
+config.font = wezterm.font ('CaskaydiaMono Nerd Font', {weight = 'Bold', italic = false})
+config.font_size = 14.0
+
+-- key mappings
 config.keys = {
-    -- Split pane vertically
+    -- split pane vertically
     {
         key = '"',
         mods = 'CTRL|SHIFT|ALT',
         action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' },
     },
-    -- Split pane horizontally
+    -- split pane horizontally
     {
         key = '%',
         mods = 'CTRL|SHIFT|ALT',
         action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' },
     },
-    -- Close current pane
+    -- close current pane
     {
         key = 'w',
         mods = 'CTRL|ALT',
         action = wezterm.action.CloseCurrentPane { confirm = true },
     },
-    -- Change pane (by alphabet)
-    {
-        key = '8',
-        mods = 'CTRL',
-        action = wezterm.action.PaneSelect,
+    -- change pane (by alphabet)
+    { 
+        key = '8', 
+        mods = 'CTRL', 
+        action = wezterm.action.PaneSelect 
     },
-    -- Reload configuration
+    -- reload configuration
     {
         key = 'R',
         mods = 'CTRL|SHIFT|ALT',

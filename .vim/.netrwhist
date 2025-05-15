@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/syxm1/.config/nvim'
+let g:netrw_dirhist_9='/home/syxm1/.config/nvim.bak/lua/plugins'
+let g:netrw_dirhist_8='/home/syxm1/.config/nvim.bak/lua'
+let g:netrw_dirhist_7='/home/syxm1/.config/nvim.bak'
+let g:netrw_dirhist_6='/home/syxm1/.config/nvim.bak/.git'
+let g:netrw_dirhist_5='/home/syxm1/.config/nvim.bak'
+let g:netrw_dirhist_4='/home/syxm1/.config/nvim'
+let g:netrw_dirhist_3='/home/syxm1/.config/nvim/lua'
+let g:netrw_dirhist_2='/home/syxm1/.config/nvim/lua/config'
+let g:netrw_dirhist_1='/home/syxm1/.config/nvim/lua'

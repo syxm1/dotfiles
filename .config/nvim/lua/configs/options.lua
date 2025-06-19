@@ -10,6 +10,7 @@ opt.nu = true
 opt.backup = false
 opt.swapfile = false
 
+-- Tabs
 opt.tabstop = 2
 opt.expandtab = true
 opt.smarttab = true

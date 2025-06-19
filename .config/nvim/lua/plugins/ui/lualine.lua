@@ -54,7 +54,7 @@ return {
 				},
 				lualine_y = {
 					{
-						"lsp_status",
+						"progress",
 					},
 				},
 				lualine_z = {

@@ -16,6 +16,9 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
+# Syntax highlight
+source ~/.config/zsh/zsh-syntax-highlighting/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh
+
 # Add in snippets
 zinit snippet OMZP::git
 zinit snippet OMZP::sudo
@@ -51,8 +54,6 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
 alias c='cd'
-alias ls='colorls'
-alias tree='colorls --tree'
 alias s='source'
 alias n='nvim'
 alias y='yazi'
@@ -91,3 +92,6 @@ export PATH="/home/syxm1/competitive-programming/tools/stress-testin:$PATH" # st
 # Shell Integrations
 eval "$(starship init zsh)" # terminal theme
 eval "$(fzf --zsh)" # fuzzyfinder
+
+# Neofetch
+fastfetch

@@ -50,10 +50,9 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias c='cd'
-alias s='source'
 alias n='nvim'
 alias y='yazi'
+alias ls='ls --color'
 
 # Created by `pipx` on 2025-03-25 15:37:13
 export PATH="$PATH:/home/syxm1/.local/bin"

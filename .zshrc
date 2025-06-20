@@ -1,6 +1,3 @@
-# Config display
-export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf):0
-
 # zinit: Package manager for zsh
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"

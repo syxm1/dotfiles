@@ -23,6 +23,7 @@ return {
 			dashboard.button("e", "  New file", ":ene<CR>"),
 			dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
 			dashboard.button("l", "  Lazy", ":Lazy<CR>"),
+      dashboard.button("h", "󰿶  Health check", ":checkhealth<CR>"),
 			dashboard.button("q", "󰩈  Quit Neovim", ":qa<CR>"),
 		}
 

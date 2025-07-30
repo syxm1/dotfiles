@@ -13,6 +13,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 		os.exit(1)
 	end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 -- load all folder under lua/plugins recursively
@@ -43,7 +44,5 @@ require("lazy").setup(get_plugin_specs(), {
 	ui = {
 		size = { width = 0.8, heigth = 0.8 },
 		border = "rounded",
-		title = "",
-		icons = {},
 	},
 })

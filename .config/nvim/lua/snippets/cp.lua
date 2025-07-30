@@ -27,6 +27,12 @@ ls.add_snippets("cpp", {
       #include <bits/stdc++.h>
       using namespace std;
 
+      #ifdef debug
+      #define trace(x) cerr << #x << ": " << x << '\n'
+      #else
+      #define trace(x)
+      #endif
+
       #define int int64_t
 
       signed main() {{
@@ -42,8 +48,25 @@ ls.add_snippets("cpp", {
 })
 
 ls.add_snippets("cpp", {
+	s(
+		"random",
+		fmt(
+      [[
+      mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+
+      int rand(int l, int r) {{
+        uniform_int_distribution<int> uid(l, r);
+        return uid(rng);
+      }}
+      ]],
+			{ }
+		)
+	),
+})
+
+ls.add_snippets("cpp", {
   s(
-    "binpoww",
+    "binpow",
     fmt(
       [[
       int binpow(int a, int x, int mod) {{

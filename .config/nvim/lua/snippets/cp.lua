@@ -33,7 +33,7 @@ ls.add_snippets("cpp", {
       #define trace(x)
       #endif
 
-      #define int int64_t
+      #define int long long
 
       signed main() {{
         ios_base::sync_with_stdio(false);
